@@ -1,4 +1,4 @@
-** Address Lookup **
+**Address Lookup**
 This applicaton uses Google Maps API to locate an address. 
 If the address is incomplete it will use its best guess to autocomplete the address and return its location on the map.
 
