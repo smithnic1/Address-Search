@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
   mode: 'development',
@@ -26,5 +30,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js']
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+        'process.env.JS_GOOGLE_MAPS_API': JSON.stringify(process.env.JS_GOOGLE_MAPS_API),
+    }),
+  ]
 };
